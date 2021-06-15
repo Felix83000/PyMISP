@@ -38,7 +38,11 @@ if __name__ == '__main__':
     if not result:
         print('No results for that time period')
         exit(0)
-
+    else:
+        for e in result:
+            print(e.tags)
+            print(e.distribution)
+            
     if args.output:
         with open(args.output, 'w') as f:
             for r in result:
